@@ -1,21 +1,111 @@
 <template>
   <div class="home-center-main">
-    center
+    <div class="home-center-main-roll"></div>
+    <div class="home-center-main-main">
+      <div class="home-center-main-main-vueproject">
+        <show-more
+          class="home-center-main-main-allproject-head"
+          :text="vueProject.text"
+          :path="vueProject.path"
+        ></show-more>
+        <div class="home-center-main-main-allproject-main">
+          <home-project-block
+            v-for="(value, key) in vueProjectInfo"
+            :key="key"
+            :title="value.title"
+            :detail="value.detail"
+            :backgroundImagePath="value.backgroundImagePath"
+            :path="value.path"
+            class="home-center-main-main-project-item"
+          ></home-project-block>
+        </div>
+      </div>
+      <div class="home-center-main-main-reactproject">
+        <show-more
+          class="home-center-main-main-allproject-head"
+          :text="reactProject.text"
+          :path="reactProject.path"
+        ></show-more>
+        <div class="home-center-main-main-allproject-main">
+          <home-project-block
+            v-for="(value, key) in reactProjectInfo"
+            :key="key"
+            :title="value.title"
+            :detail="value.detail"
+            :backgroundImagePath="value.backgroundImagePath"
+            :path="value.path"
+            class="home-center-main-main-project-item"
+          ></home-project-block>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
+
 <script>
+import HomeProjectBlock from './ProjectBlock'
+import ShowMore from '../common/ShowMore'
+
 export default {
   name: 'HomeCenter',
+  computed: {
+    vueProjectInfo () {
+      return this.$store.getters.projects.VueProject
+    },
+    reactProjectInfo () {
+      return this.$store.getters.projects.ReactProject
+    }
+  },
   data () {
     return {
+      vueProject: {
+        text: '查看更多Vue项目 <span class="iconfont" style="font-size: 12px;">&#xe621;</span>',
+        path: '/vue-project'
+      },
+      reactProject: {
+        text: '查看更多React项目 <span class="iconfont" style="font-size: 12px;">&#xe621;</span>',
+        path: '/react-project'
+      }
     }
+  },
+  components: {
+    HomeProjectBlock,
+    ShowMore
   }
 }
 </script>
+
 <style scoped lang="scss">
-@import "assets/global.scss";
+@import "assets/style/global.scss";
 
 .home-center-main {
+  display: flex;
+  flex-direction: column;
   background: linear-gradient(to bottom, #5473aa, #405580);
+  .home-center-main-roll {
+    background: url($homeImgPublicPath+"1.jpg") no-repeat;
+    background-size: 100% 100%;
+    height: 460px;
+  }
+  .home-center-main-main {
+    @include setDivMiddle(920px);
+    margin-top: 15px;
+    flex: 1;
+    .home-center-main-main-project-item {
+      margin: 5px 30px;
+    }
+    .home-center-main-main-vueproject {
+    }
+    .home-center-main-main-allproject-head {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin: 10px 30px 10px 0;
+    }
+    .home-center-main-main-allproject-main {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
 }
 </style>

@@ -1,8 +1,9 @@
 <template>
   <div class="home-footer-main">
-    footer
+    ©LCL首页 | Powered by LCL
   </div>
 </template>
+
 <script>
 export default {
   name: 'HomeFooter',
@@ -12,9 +13,14 @@ export default {
   }
 }
 </script>
+
 <style scoped lang="scss">
-@import "assets/global.scss";
+@import "assets/style/global.scss";
 
 .home-footer-main {
+  @include fontCenter(40px);
+  color: $homeTextColor;
+  font-size: 12px;
+  cursor: default;
 }
 </style>

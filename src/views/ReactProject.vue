@@ -1,12 +1,12 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div class="react-project">
+    ReactProject
   </div>
 </template>
 
 <script>
 export default {
-  name: '',
+  name: 'ReactProject',
   data () {
     return {
     }

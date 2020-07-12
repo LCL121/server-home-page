@@ -1,0 +1,26 @@
+{
+    "success": true,
+    "data": {
+        "VueProject": {
+            "xssc": {
+                "title": "山西大学2019级迎新网站",
+                "detail": "第一个使用Vue框架开发的项目",
+                "backgroundImagePath": "http://bkzs.sxu.edu.cn/images/2019-07/35982080e0bc4df88657e01e05e7c20b.jpg",
+                "path": "http://bkzs.sxu.edu.cn/xssc/"
+            },
+            "travel": {
+                "title": "开发去哪儿网App",
+                "detail": "第一个跟着教程视频完全使用Vue知识开发的项目",
+                "backgroundImagePath": "https://img.mukewang.com/szimg/5ac2dfe100014a9005400300.jpg",
+                "path": "/vue_project/travel/"
+            },
+            "apg": {
+                "title": "算法游乐场",
+                "detail": "第一个自己独立使用Vue+Vue-router+Vuex开发的前端部分（不包括game部分）的项目",
+                "backgroundImagePath": "http://mi2.top/apg/img/bg1.3c390f3f.jpg",
+                "path": "http://mi2.top/apg/"
+            }
+        },
+        "ReactProject": {}
+    }
+}

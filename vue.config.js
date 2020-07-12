@@ -9,8 +9,18 @@ module.exports = {
       chunks: ['chunk-vendors', 'chunk-common', 'index']
     }
   },
-  chainWebpack: process.env.NODE_ENV === 'development'
-    ? config => {
+  devServer: {
+    proxy: {
+      '/api': {
+        target: 'http://localhost:8080'
+      },
+      'http://localhost': {
+        target: 'http://localhost'
+      }
+    }
+  },
+  chainWebpack: config => {
+    if (process.env.NODE_ENV === 'development') {
       config.module
         .rule('eslint')
         .use('eslint-loader')
@@ -19,7 +29,8 @@ module.exports = {
           options.fix = true
           return options
         })
-    } : config => {},
+    }
+  },
   configureWebpack: {
     resolve: {
       alias: {

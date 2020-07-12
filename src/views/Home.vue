@@ -5,7 +5,9 @@
     <home-footer class="home-footer"></home-footer>
   </div>
 </template>
+
 <script>
+import axios from 'axios'
 import HomeHeader from 'components/home/Header'
 import HomeCenter from 'components/home/Center'
 import HomeFooter from 'components/home/Footer'
@@ -20,31 +22,49 @@ export default {
     HomeHeader,
     HomeCenter,
     HomeFooter
+  },
+  mounted () {
+    const tThis = this
+    axios.get('api/home_page/projectDetails.json')
+      .then(function (response) {
+        const data = response.data
+        if (data.success) {
+          tThis.$store.commit('setProjects', data.data)
+        } else {
+          console.error('projectDetails.json 获取失败')
+        }
+      })
+      .catch(function (error) {
+        console.log(error)
+      })
+      .finally(function () {
+      })
   }
 }
 </script>
+
 <style scoped lang="scss">
-@import "assets/global.scss";
+@import "assets/style/global.scss";
 
 .home {
   display: flex;
   flex-direction: column;
   width: 100%;
   min-width: $middleWidth;
-  height: 100vh;
-  background: #F4F4F4;
+  height: 1110px;
+  background: #f4f4f4;
   .home-header {
-    @include setPageMiddle($middleWidth);
-    height: 65px;
-    background: #5473AA;
+    @include setDivMiddle($middleWidth);
+    height: 60px;
+    background: #5473aa;
   }
   .home-center {
-    @include setPageMiddle($middleWidth);
+    @include setDivMiddle($middleWidth);
     flex: 1;
   }
   .home-footer {
-    @include setPageMiddle($middleWidth);
-    height: 30px;
+    @include setDivMiddle($middleWidth);
+    height: 40px;
     background: #405580;
   }
 }

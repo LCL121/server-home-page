@@ -1,0 +1,11 @@
+@mixin setDivMiddle($width) {
+  width: $width;
+  height: 100%;
+  margin: 0 auto;
+}
+
+@mixin fontCenter($allHeight) {
+  height: $allHeight;
+  line-height: $allHeight;
+  text-align: center;
+}

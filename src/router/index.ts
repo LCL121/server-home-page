@@ -11,6 +11,16 @@ const routes: Array<RouteConfig> = [
     component: Home
   },
   {
+    path: '/vue-project',
+    name: 'VueProject',
+    component: () => import(/* webpackChunkName: "vue-project" */ '../views/VueProject.vue')
+  },
+  {
+    path: '/react-project',
+    name: 'ReactProject',
+    component: () => import(/* webpackChunkName: "react-project" */ '../views/ReactProject.vue')
+  },
+  {
     path: '/about',
     name: 'About',
     // route level code-splitting
