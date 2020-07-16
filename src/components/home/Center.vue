@@ -1,6 +1,8 @@
 <template>
   <div class="home-center-main">
-    <div class="home-center-main-roll"></div>
+    <div class="home-center-main-roll">
+      <rotation :rotationProjects=rotationProjects.public></rotation>
+    </div>
     <div class="home-center-main-main">
       <div class="home-center-main-main-vueproject">
         <show-more
@@ -43,6 +45,8 @@
 </template>
 
 <script>
+import axios from 'axios'
+import Rotation from '../common/Rotation'
 import HomeProjectBlock from './ProjectBlock'
 import ShowMore from '../common/ShowMore'
 
@@ -50,10 +54,10 @@ export default {
   name: 'HomeCenter',
   computed: {
     vueProjectInfo () {
-      return this.$store.getters.projects.VueProject
+      return this.$store.getters.projects.VueProject && this.$store.getters.projects.VueProject.public
     },
     reactProjectInfo () {
-      return this.$store.getters.projects.ReactProject
+      return this.$store.getters.projects.ReactProject && this.$store.getters.projects.ReactProject.public
     }
   },
   data () {
@@ -65,12 +69,23 @@ export default {
       reactProject: {
         text: '查看更多React项目 <span class="iconfont" style="font-size: 12px;">&#xe621;</span>',
         path: '/react-project'
-      }
+      },
+      rotationProjects: {}
     }
   },
   components: {
     HomeProjectBlock,
-    ShowMore
+    ShowMore,
+    Rotation
+  },
+  mounted () {
+    const that = this
+    axios.get('/api/home_page/rotation.json')
+      .then((res) => {
+        that.rotationProjects = res.data.data
+      })
+      .catch()
+      .finally()
   }
 }
 </script>
@@ -83,8 +98,9 @@ export default {
   flex-direction: column;
   background: linear-gradient(to bottom, #5473aa, #405580);
   .home-center-main-roll {
-    background: url($homeImgPublicPath+"1.jpg") no-repeat;
-    background-size: 100% 100%;
+    // background: url($homeImgPublicPath+"1.jpg") no-repeat;
+    // background-size: 100% 100%;
+    background: #ccc;
     height: 460px;
   }
   .home-center-main-main {
@@ -93,8 +109,6 @@ export default {
     flex: 1;
     .home-center-main-main-project-item {
       margin: 5px 30px;
-    }
-    .home-center-main-main-vueproject {
     }
     .home-center-main-main-allproject-head {
       display: flex;

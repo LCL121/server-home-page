@@ -6,10 +6,12 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    projects: {}
+    projects: {
+      public: {}
+    }
   },
   mutations: {
-    setProjects (state, projects: ProjectObjs) {
+    setProjects (state, projects) {
       state.projects = projects
     }
   },
