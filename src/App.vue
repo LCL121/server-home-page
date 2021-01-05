@@ -26,6 +26,6 @@ export default {
   margin: 0;
   list-style: none;
   text-decoration: none;
-  font-family: "PingFang SC", "微软雅黑", serif, "Microsoft YaHei", Helvetica, "Helvetica Neue", Tahoma, Arial, sans-serif;
+  font-family: sans-serif, "微软雅黑", serif, "Microsoft YaHei", Helvetica, "Helvetica Neue", Tahoma, Arial, sans-serif;
 }
 </style>

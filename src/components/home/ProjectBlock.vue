@@ -52,14 +52,14 @@ export default {
     width: 100%;
     height: 100%;
     background: url($homeImgPublicPath+"mask.png");
-    padding: 20px 30px;
+    padding: px2rem(20) px2rem(30);
     box-sizing: border-box;
     .home-project-block-title {
-      margin-top: 12px;
-      margin-bottom: 12px;
-      height: 56px;
-      font-size: 20px;
-      line-height: 28px;
+      margin-top: px2rem(12);
+      margin-bottom: px2rem(12);
+      height: px2rem(56);
+      font-size: px2rem(20);
+      line-height: px2rem(28);
       font-weight: 700;
       color: #fff;
       word-break: break-word;
@@ -67,10 +67,10 @@ export default {
       overflow: hidden;
     }
     .home-project-block-detail {
-      margin-bottom: 24px;
-      height: 44px;
-      font-size: 14px;
-      line-height: 22px;
+      margin-bottom: px2rem(24);
+      height: px2rem(44);
+      font-size: px2rem(14);
+      line-height: px2rem(22);
       color: rgba(255, 255, 255, 0.6);
       word-break: break-word;
       text-overflow: ellipsis;

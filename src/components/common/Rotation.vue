@@ -84,6 +84,8 @@ export default rotation
 </script>
 
 <style scoped lang="scss">
+@import '@/assets/style/global.scss';
+
 .rotation {
   height: 100%;
   width: 100%;
@@ -120,19 +122,20 @@ export default rotation
   .rotation-nav {
     z-index: 100;
     background-color: rgba(0, 0, 0, 0.7);
-    width: 300px;
-    height: 430px;
-    padding: 10px 0;
+    width: px2rem(300);
+    height: px2rem(430);
+    padding: px2rem(10) 0;
     position: absolute;
-    right: 100px;
-    top: 5px;
+    right: px2rem(100);
+    top: px2rem(5);
     display: flex;
     flex-direction: column;
+    font-size: px2rem(16);
     .rotaion-nav-wrapper {
       color: #dddddd;
       width: 100%;
       flex: 1;
-      padding: 8px 15px;
+      padding: px2rem(8) px2rem(15);
       box-sizing: border-box;
     }
     .selected {
@@ -141,8 +144,8 @@ export default rotation
       color: #0676fe;
       background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.5), transparent);
       .rotation-nav-title {
-        font-size: 22px;
-        margin: 5px 0;
+        font-size: px2rem(22);
+        margin: px2rem(5) 0;
       }
     }
   }

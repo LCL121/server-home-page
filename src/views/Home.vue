@@ -50,12 +50,12 @@ export default {
   display: flex;
   flex-direction: column;
   width: 100%;
-  min-width: $middleWidth;
-  height: 1110px;
+  width: 100vw;
+  height: px2rem(1110);
   background: #f4f4f4;
   .home-header {
     @include setDivMiddle($middleWidth);
-    height: 60px;
+    height: px2rem(60);
     background: #5473aa;
   }
   .home-center {
@@ -64,7 +64,7 @@ export default {
   }
   .home-footer {
     @include setDivMiddle($middleWidth);
-    height: 40px;
+    height: px2rem(40);
     background: #405580;
   }
 }

@@ -1,5 +1,10 @@
 @mixin setDivMiddle($width) {
-  width: $width;
+  @media screen and (max-width:1000px) {
+    width: 100vw;
+  }
+  @media screen and (min-width:1001px) {
+    width: $width;
+  }
   height: 100%;
   margin: 0 auto;
 }

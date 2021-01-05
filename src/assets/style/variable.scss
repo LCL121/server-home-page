@@ -1,5 +1,7 @@
+@import './function.scss';
+
 $middleWidth: 1200px;
 $homeImgPublicPath: "../../../public/img/";
-$homeProjectBlockWidth: 400px;
-$homeProjectBlockHeight: 200px;
+$homeProjectBlockWidth: px2rem(400);
+$homeProjectBlockHeight: px2rem(200);
 $homeTextColor: #DDE1EC;

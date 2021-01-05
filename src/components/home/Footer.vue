@@ -18,7 +18,7 @@ export default {
 @import "assets/style/global.scss";
 
 .home-footer-main {
-  @include fontCenter(40px);
+  @include fontCenter(px2rem(40));
   color: $homeTextColor;
   font-size: 12px;
   cursor: default;

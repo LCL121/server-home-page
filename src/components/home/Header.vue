@@ -5,9 +5,7 @@
       alt="logo"
     >
     <span>LCL首页</span>
-    <nav>
-      <router-link to="/about">关于</router-link>
-    </nav>
+    <router-link to="/about">关于</router-link>
   </div>
 </template>
 
@@ -31,20 +29,18 @@ export default {
   align-items: center;
   color: $homeTextColor;
   img {
-    height: 40px;
-    margin-left: 140px;
+    height: px2rem(40);
+    margin-left: px2rem(75);
   }
   span {
-    font-size: 24px;
+    font-size: px2rem(24);
     font-weight: 700;
     cursor: default;
   }
-  nav {
-    margin-right: 140px;
-    a {
-      color: $homeTextColor;
-      font-size: 16px;
-    }
+  a {
+    color: $homeTextColor;
+    font-size: 16px;
+    margin-right: px2rem(75);
   }
 }
 </style>

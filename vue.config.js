@@ -1,6 +1,7 @@
 const path = require('path')
 
 module.exports = {
+  assetsDir: 'defaultAssets',
   pages: {
     index: {
       entry: './src/main.ts',

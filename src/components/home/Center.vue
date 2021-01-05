@@ -101,24 +101,25 @@ export default {
     // background: url($homeImgPublicPath+"1.jpg") no-repeat;
     // background-size: 100% 100%;
     background: #ccc;
-    height: 460px;
+    height: px2rem(460);
   }
   .home-center-main-main {
-    @include setDivMiddle(920px);
-    margin-top: 15px;
+    @include setDivMiddle(px2rem(920));
+    margin-top: px2rem(15);
     flex: 1;
     .home-center-main-main-project-item {
-      margin: 5px 30px;
+      margin: px2rem(5) px2rem(30);
     }
     .home-center-main-main-allproject-head {
       display: flex;
       justify-content: flex-end;
       align-items: center;
-      margin: 10px 30px 10px 0;
+      margin: px2rem(10) px2rem(30) px2rem(10) 0;
     }
     .home-center-main-main-allproject-main {
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
     }
   }
 }
