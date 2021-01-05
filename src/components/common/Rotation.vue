@@ -1,8 +1,12 @@
 <template>
   <div
     class="rotation"
-    @mouseout="setTimer"
+    @mousedown="clearTimer"
+    @mouseup="setTimer"
     @mouseover="clearTimer"
+    @mouseout="setTimer"
+    @touchstart="startOperation"
+    @touchend="endOperation"
   >
     <ul class="rotation-images">
       <li
@@ -29,6 +33,9 @@
         >{{item.detail}}</div>
       </div>
     </div>
+    <div class="rotation-nav-mobile">
+      <div v-for="i in 10" :key="i" :class="{selected: i === select + 1}"></div>
+    </div>
   </div>
 </template>
 
@@ -46,7 +53,8 @@ const rotation = {
       timer: setInterval(() => {
         this.select++
         if (this.select >= 10) this.select = 0
-      }, sleepTime)
+      }, sleepTime),
+      startX: 0
     }
   },
   computed: {
@@ -68,14 +76,32 @@ const rotation = {
     changeSelected (index) {
       this.select = index
     },
+    startOperation (event) {
+      this.clearTimer()
+      this.startX = event.touches[0].clientX
+    },
+    endOperation (event) {
+      const moveX = event.changedTouches[0].clientX - this.startX
+      if (moveX >= 50) {
+        this.select--
+      } else if (moveX <= -50) {
+        this.select++
+      }
+      if (this.select >= 10) this.select = 0
+      if (this.select < 0) this.select = 9
+      this.setTimer()
+    },
     clearTimer () {
       clearInterval(this.timer)
+      this.timer = null
     },
     setTimer () {
-      this.timer = setInterval(() => {
-        this.select++
-        if (this.select >= 10) this.select = 0
-      }, sleepTime)
+      if (!this.timer) {
+        this.timer = setInterval(() => {
+          this.select++
+          if (this.select >= 10) this.select = 0
+        }, sleepTime)
+      }
     }
   }
 }
@@ -126,11 +152,17 @@ export default rotation
     height: px2rem(430);
     padding: px2rem(10) 0;
     position: absolute;
-    right: px2rem(100);
     top: px2rem(5);
     display: flex;
     flex-direction: column;
     font-size: px2rem(16);
+    right: px2rem(100);
+    @media screen and (max-width:1100px) {
+      right: px2rem(50);
+    }
+    @media screen and (max-width:500px) {
+      display: none;
+    }
     .rotaion-nav-wrapper {
       color: #dddddd;
       width: 100%;
@@ -147,6 +179,28 @@ export default rotation
         font-size: px2rem(22);
         margin: px2rem(5) 0;
       }
+    }
+  }
+
+  .rotation-nav-mobile {
+    z-index: 100;
+    position: absolute;
+    bottom: px2rem(15);
+    display: flex;
+    left: px2rem(150);
+    @media screen and (min-width:501px) {
+      display: none;
+    }
+
+    div {
+      height: px2rem(20);
+      width: px2rem(20);
+      border-radius: 50%;
+      background: rgba(255, 255, 255, .3);
+    }
+
+    .selected {
+      background: #ffffff;
     }
   }
 }

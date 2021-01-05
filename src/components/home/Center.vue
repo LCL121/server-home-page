@@ -102,6 +102,9 @@ export default {
     // background-size: 100% 100%;
     background: #ccc;
     height: px2rem(460);
+    @media screen and (max-width:501px) {
+      height: px2rem(350);
+    }
   }
   .home-center-main-main {
     @include setDivMiddle(px2rem(920));
