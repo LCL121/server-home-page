@@ -51,7 +51,6 @@ export default {
   flex-direction: column;
   width: 100%;
   width: 100vw;
-  height: px2rem(1110);
   background: #f4f4f4;
   .home-header {
     @include setDivMiddle($middleWidth);

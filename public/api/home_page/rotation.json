@@ -17,16 +17,40 @@
         ],
         "public": [
             {
+                "title": "WeFile",
+                "detail": "目前最满意的项目",
+                "image": "http://leichenlong.com/img/wefile.png",
+                "path": "http://wefile.leichenlong.com"
+            },
+            {
+                "title": "餐厅管理系统",
+                "detail": "vue3.0+TS+scss的项目",
+                "image": "http://leichenlong.com/img/rms.png",
+                "path": "http://rms.leichenlong.com"
+            },
+            {
+                "title": "算法游乐场",
+                "detail": "第一个自己独立使用Vue全家桶的项目",
+                "image": "http://apg.leichenlong.com/img/bg1.3c390f3f.jpg",
+                "path": "http://apg.leichenlong.com"
+            },
+            {
                 "title": "山西大学2019级迎新网站",
                 "detail": "第一个使用Vue框架开发的项目",
                 "image": "http://bkzs.sxu.edu.cn/images/2019-07/35982080e0bc4df88657e01e05e7c20b.jpg",
                 "path": "http://bkzs.sxu.edu.cn/xssc/"
             },
             {
-                "title": "算法游乐场",
-                "detail": "第一个自己独立使用Vue全家桶的项目",
-                "image": "http://mi2.top/apg/img/bg1.3c390f3f.jpg",
-                "path": "http://mi2.top/apg/"
+                "title": "LCL专栏",
+                "detail": "跟着慕课网做的Vue3.0+TS的项目",
+                "image": "http://zheye.leichenlong.com/img/callout.5b86dfc8.svg",
+                "path": "http://zheye.leichenlong.com"
+            },
+            {
+                "title": "开发去哪儿网App",
+                "detail": "第一个跟着教程视频完全使用Vue知识开发的项目",
+                "image": "https://img.mukewang.com/szimg/5b50858100011b9220000560.jpg",
+                "path": "http://travel.leichenlong.com"
             }
         ]
     }

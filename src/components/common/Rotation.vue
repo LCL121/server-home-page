@@ -187,7 +187,7 @@ export default rotation
     position: absolute;
     bottom: px2rem(15);
     display: flex;
-    left: px2rem(150);
+    left: px2rem(125);
     @media screen and (min-width:501px) {
       display: none;
     }
@@ -195,6 +195,7 @@ export default rotation
     div {
       height: px2rem(20);
       width: px2rem(20);
+      margin: 0 px2rem(2.5);
       border-radius: 50%;
       background: rgba(255, 255, 255, .3);
     }
