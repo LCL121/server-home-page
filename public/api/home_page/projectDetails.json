@@ -19,21 +19,15 @@
             "public": {
                 "wefile": {
                     "title": "WeFile",
-                    "detail": "目前最满意的项目，vue2.x全家桶，三端适配、并发控制、分开上传等技术",
+                    "detail": "目前最满意的项目，Vue2.x全家桶，三端适配、并发控制、分开上传等技术",
                     "backgroundImagePath": "http://leichenlong.com/img/wefile.png",
                     "path": "http://wefile.leichenlong.com"
                 },
                 "rms": {
-                    "title": "餐厅管理系统",
-                    "detail": "vue3.0+TS+scss的项目",
+                    "title": "食堂管理系统",
+                    "detail": "Vue3.0+TypeScript+Sass 的项目",
                     "backgroundImagePath": "http://leichenlong.com/img/rms.png",
                     "path": "http://rms.leichenlong.com"
-                },
-                "xssc": {
-                    "title": "山西大学2019级迎新网站",
-                    "detail": "第一个使用Vue框架开发的项目",
-                    "backgroundImagePath": "http://bkzs.sxu.edu.cn/images/2019-07/35982080e0bc4df88657e01e05e7c20b.jpg",
-                    "path": "http://bkzs.sxu.edu.cn/xssc/"
                 },
                 "apg": {
                     "title": "算法游乐场",
@@ -41,20 +35,41 @@
                     "backgroundImagePath": "http://apg.leichenlong.com/img/bg1.3c390f3f.jpg",
                     "path": "http://apg.leichenlong.com"
                 },
+                "xssc2020": {
+                    "title": "山西大学2020级迎新网站",
+                    "detail": "山西大学2020级迎新网站",
+                    "backgroundImagePath": "http://bkzs.sxu.edu.cn/images/2019-07/35982080e0bc4df88657e01e05e7c20b.jpg",
+                    "path": "http://resh_sxu.leichenlong.com"
+                },
+                "xssc2019": {
+                    "title": "山西大学2019级迎新网站",
+                    "detail": "第一个使用Vue框架开发的项目",
+                    "backgroundImagePath": "http://bkzs.sxu.edu.cn/images/2019-07/35982080e0bc4df88657e01e05e7c20b.jpg",
+                    "path": "http://bkzs.sxu.edu.cn/xssc/"
+                },
                 "lcl": {
                     "title": "LCL专栏",
-                    "detail": "跟着慕课网做的Vue3.0+TS的项目",
+                    "detail": "跟着慕课网做的Vue3.0+TypeScript 的项目",
                     "backgroundImagePath": "http://zheye.leichenlong.com/img/callout.5b86dfc8.svg",
                     "path": "http://zheye.leichenlong.com"
                 },
                 "travel": {
                     "title": "开发去哪儿网App",
                     "detail": "第一个跟着教程视频完全使用Vue知识开发的项目",
-                    "backgroundImagePath": "https://img.mukewang.com/szimg/5b50858100011b9220000560.jpg",
+                    "backgroundImagePath": "http://img1.sycdn.imooc.com/szimg/5ac2dfe100014a9005400300-500-284.jpg",
                     "path": "http://travel.leichenlong.com"
                 }
             }
         },
-        "ReactProject": {}
+        "ReactProject": {
+            "public": {
+                "jianshu": {
+                    "title": "简书",
+                    "detail": "第一个跟着教程视频使用React知识开发的项目",
+                    "backgroundImagePath": "http://img1.sycdn.imooc.com/szimg/5b3082da0001d7e905400300-500-284.jpg",
+                    "path": "http://jianshu.leichenlong.com"
+                }
+            }
+        }
     }
 }

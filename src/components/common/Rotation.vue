@@ -36,6 +36,9 @@
     <div class="rotation-nav-mobile">
       <div v-for="i in 10" :key="i" :class="{selected: i === select + 1}"></div>
     </div>
+    <div class="rotation-title-mobile">
+      <div>{{list[select].title}}</div>
+    </div>
   </div>
 </template>
 
@@ -145,6 +148,21 @@ export default rotation
     }
   }
 
+  .rotation-title-mobile {
+    display: none;
+    @media screen and (max-width:500px) {
+      display: block;
+      position: absolute;
+      top: px2rem(15);
+      z-index: 100;
+      font-size: 24px;
+      color: #fff;
+      left: 50%;
+      transform: translateX(-50%);
+      white-space: nowrap;
+    }
+  }
+
   .rotation-nav {
     z-index: 100;
     background-color: rgba(0, 0, 0, 0.7);
@@ -187,7 +205,8 @@ export default rotation
     position: absolute;
     bottom: px2rem(15);
     display: flex;
-    left: px2rem(125);
+    left: 50%;
+    transform: translateX(-50%);
     @media screen and (min-width:501px) {
       display: none;
     }
